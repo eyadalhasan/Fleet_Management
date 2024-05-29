@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "744fa364-d9d4-41df-91f5-022a28c33564",
+		"name": "vdriver",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25811363",
+		"_collection_link": "https://speeding-star-78067.postman.co/workspace/FleetManagment~2bdc7425-e8e0-41b8-bff3-db277167f9d0/collection/25811363-744fa364-d9d4-41df-91f5-022a28c33564?action=share&source=collection_link&creator=25811363"
+	},
+	"item": [
+		{
+			"name": "get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7251/api/drivers/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7251",
+					"path": [
+						"api",
+						"drivers",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add-driver",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"DicOfDic\": {\r\n        \"Tags\": {\r\n            \"drivername\": \"Ahmad2\",\r\n            \"phonenumber\": \"12366678902\"\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7251/api/drivers/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7251",
+					"path": [
+						"api",
+						"drivers",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"DicOfDic\": {\r\n        \"Tags\": {\r\n            \"Drivername\": \"Ahmad1\",\r\n            \"Phonenumber\": \"12\",\r\n            \"Driverid\": \"8\"\r\n\r\n        }\r\n    }\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7251/api/drivers/8",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7251",
+					"path": [
+						"api",
+						"drivers",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7251/api/drivers/8",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7251",
+					"path": [
+						"api",
+						"drivers",
+						"8"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

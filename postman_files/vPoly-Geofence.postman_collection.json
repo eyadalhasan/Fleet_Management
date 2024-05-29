@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "20becf18-b089-4255-b209-46ce58d57636",
+		"name": "vPoly-Geofence",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25811363",
+		"_collection_link": "https://speeding-star-78067.postman.co/workspace/FleetManagment~2bdc7425-e8e0-41b8-bff3-db277167f9d0/collection/25811363-20becf18-b089-4255-b209-46ce58d57636?action=share&source=collection_link&creator=25811363"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7251/api/Polygongeofences",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7251",
+					"path": [
+						"api",
+						"Polygongeofences"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"DicOfDic\": {\r\n        \"Tags\": {\r\n            \"GeofenceId\": \"5\",\r\n            \"Latitude\": \"40.7128\",\r\n            \"Longitude\": \"-74.0060\"\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7251/api/Polygongeofences",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7251",
+					"path": [
+						"api",
+						"Polygongeofences"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"DicOfDic\": {\r\n        \"Tags\": {\r\n            \"GeofenceId\": \"10\",\r\n            \"Latitude\": \"41.7128\",\r\n            \"Longitude\": \"-74.0060\",\r\n            \"id\": \"6\"\r\n\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7251/api/Polygongeofences/10",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7251",
+					"path": [
+						"api",
+						"Polygongeofences",
+						"10"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

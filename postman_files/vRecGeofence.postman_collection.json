@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "80694ad7-ed06-42c0-8f7b-96344481bd00",
+		"name": "vRecGeofence",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25811363",
+		"_collection_link": "https://speeding-star-78067.postman.co/workspace/FleetManagment~2bdc7425-e8e0-41b8-bff3-db277167f9d0/collection/25811363-80694ad7-ed06-42c0-8f7b-96344481bd00?action=share&source=collection_link&creator=25811363"
+	},
+	"item": [
+		{
+			"name": "get-by-id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7251/api/Rectanglegeofences",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7251",
+					"path": [
+						"api",
+						"Rectanglegeofences"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"DicOfDic\": {\r\n        \"Tags\": {\r\n            \"GeofenceId\": \"10\",\r\n            \"North\": \"43.7128\",\r\n            \"East\": \"-71.0060\",\r\n            \"West\": \"-71.0060\",\r\n            \"South\": \"40.7128\"\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7251/api/Rectanglegeofences",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7251",
+					"path": [
+						"api",
+						"Rectanglegeofences"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"DicOfDic\": {\r\n        \"Tags\": {\r\n            \"GeofenceId\": \"10\",\r\n            \"North\": \"43.7128\",\r\n            \"East\": \"-71.0060\",\r\n            \"West\": \"-71.0060\",\r\n            \"South\": \"40.7128\",\r\n             \"id\": 2\r\n\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7251/api/Rectanglegeofences/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7251",
+					"path": [
+						"api",
+						"Rectanglegeofences",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

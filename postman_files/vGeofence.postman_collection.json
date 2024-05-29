@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "4d454011-433d-4660-8380-9f6d44c5af42",
+		"name": "vGeofence",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25811363",
+		"_collection_link": "https://speeding-star-78067.postman.co/workspace/FleetManagment~2bdc7425-e8e0-41b8-bff3-db277167f9d0/collection/25811363-4d454011-433d-4660-8380-9f6d44c5af42?action=share&source=collection_link&creator=25811363"
+	},
+	"item": [
+		{
+			"name": "get-by-id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7251/api/Geofences/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7251",
+					"path": [
+						"api",
+						"Geofences",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7251/api/Geofences/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7251",
+					"path": [
+						"api",
+						"Geofences",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"DicOfDic\": {\r\n        \"Tags\": {\r\n            \"Geofencetype\": \"Rectanlger1\",\r\n            \"Addeddate\": 1620463276000, // Example timestamp (UNIX timestamp in milliseconds)\r\n            \"strockcolor\": \"red\",\r\n            \"strockopacity\": 0.3,\r\n            \"strockweight\": 2,\r\n            \"Fillcolor\": \"brown\",\r\n            \"Fillopacity\": 0.1\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7251/api/Geofences/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7251",
+					"path": [
+						"api",
+						"Geofences",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"DicOfDic\": {\r\n        \"Tags\": {\r\n            \"Geofencetype\": \"Rectanlger1\",\r\n            \"Addeddate\": 1620463276000, // Example timestamp (UNIX timestamp in milliseconds)\r\n            \"strockcolor\": \"red\",\r\n            \"strockopacity\": 0.3,\r\n            \"strockweight\": 2,\r\n            \"Fillcolor\": \"brown\",\r\n            \"Fillopacity\": 0.1,\r\n            \"geofenceID\":11\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7251/api/Geofences/11",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7251",
+					"path": [
+						"api",
+						"Geofences",
+						"11"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
