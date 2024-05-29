@@ -1,0 +1,67 @@
+<h2 mat-dialog-title>Add/Edit Vehicle</h2>
+<div mat-dialog-content>
+
+
+
+
+  <mat-form-field class="form-field">
+    <p>Vehicle ID</p>
+    <mat-select [(ngModel)]="history.VehicleID" name="VehicleID">
+      <mat-option *ngFor="let vehicle of vehicles" [value]="vehicle.vehicleID">
+        {{vehicle.vehicleID}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+
+  <mat-form-field appearance="fill">
+    <p>VehicleDirection</p>
+    <input matInput [(ngModel)]="history.VehicleDirection" placeholder="Enter Vehicle Direction">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <p>VehicleSpeed</p>
+    <input matInput [(ngModel)]="history.VehicleSpeed" placeholder="Enter Vehicle Speed">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <p>Address</p>
+    <input matInput [(ngModel)]="history.Address" placeholder="Enter Address">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <p>Latitude</p>
+    <input matInput [(ngModel)]="history.Latitude" placeholder="Enter Latitude ">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <p>Longitude</p>
+    <input matInput [(ngModel)]="history.Longitude" placeholder="Enter Longitude">
+  </mat-form-field>
+
+
+  <mat-form-field class="form-field" style="margin-top:-40px">
+    <p>Status</p>
+    <mat-select [(ngModel)]="status" name="status">
+      <mat-option [value]=0>
+        {{0}}
+      </mat-option>
+      <mat-option [value]=1>
+        {{1}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <p> Date</p>
+    <input matInput type="datetime" [(ngModel)]="date">
+  </mat-form-field>
+  <br />
+
+
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button (click)="onSave()">Save</button>
+</div>

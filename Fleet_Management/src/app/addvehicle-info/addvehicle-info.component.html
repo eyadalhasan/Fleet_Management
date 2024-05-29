@@ -1,0 +1,40 @@
+<h2 mat-dialog-title>Add/Edit Vehicle</h2>
+<div mat-dialog-content>
+
+  <mat-form-field class="form-field">
+    <p>Vehicle ID</p>
+    <mat-select [(ngModel)]="vehicle.vehicleID" name="vehicleID">
+      <mat-option *ngFor="let vehicle of vehicles" [value]="vehicle.vehicleID">
+        {{vehicle.vehicleID}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field class="form-field">
+    <p>Driver</p>
+    <mat-select [(ngModel)]="vehicle.driverID" name="driverID">
+      <mat-option *ngFor="let driver of drivers" [value]="driver.driverID">
+        {{driver.driverID}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <p>Vehicle Make</p>
+    <input matInput [(ngModel)]="vehicle.vehicleMake" placeholder="Enter Vehicle Make">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <p>Vehicle Model</p>
+    <input matInput [(ngModel)]="vehicle.vehicleModel" placeholder="Enter Vehicle Model">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <p>Purchase Date</p>
+    <input matInput [(ngModel)]="vehicle.purchaseDate" placeholder="Enter Purchase Date" type="date">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button (click)="onSave()">Save</button>
+</div>

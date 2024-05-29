@@ -1,0 +1,23 @@
+
+
+<h2 mat-dialog-title>Add/Edit Vehicle</h2>
+<div mat-dialog-content>
+  <mat-form-field appearance="fill">
+    <mat-label>Vehicle Number</mat-label>
+    <p>Vehicle Number</p>
+    <input matInput [(ngModel)]="vehicle.vehicleNumber" placeholder="Enter Vehicle Number">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Vehicle Type</mat-label>
+    <p>Vehicle Type</p>
+    <input matInput [(ngModel)]="vehicle.vehicleType" placeholder="Enter Vehicle Type">
+  </mat-form-field>
+
+  <!-- Add more fields as needed -->
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button (click)="onSave()">Save</button>
+</div>

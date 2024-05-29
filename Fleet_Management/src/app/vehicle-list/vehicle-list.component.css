@@ -1,0 +1,26 @@
+.table-container {
+  margin: 20px;
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+  .navigation-buttons button {
+    margin: 0 10px;
+  }
+
+mat-header-cell {
+  background-color: #1976D2;
+  color: #ffffff;
+}
+
+mat-cell {
+  color: #424242;
+}
+
+.mat-elevation-z8 {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

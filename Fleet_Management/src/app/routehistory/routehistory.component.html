@@ -1,0 +1,112 @@
+<table mat-table [dataSource]="routeHistories" class="mat-elevation-z8">
+
+  <!-- Vehicle ID Column -->
+  <ng-container matColumnDef="vehicleID">
+    <th mat-header-cell *matHeaderCellDef> Vehicle ID </th>
+    <td mat-cell *matCellDef="let history"> {{history.vehicleID}} </td>
+  </ng-container>
+
+  <!-- Vehicle Number Column -->
+  <ng-container matColumnDef="vehicleNumber">
+    <th mat-header-cell *matHeaderCellDef> Vehicle Number </th>
+    <td mat-cell *matCellDef="let history"> {{history.vehicleNumber}} </td>
+  </ng-container>
+
+  <!-- Vehicle Direction Column -->
+  <ng-container matColumnDef="vehicleDirection">
+    <th mat-header-cell *matHeaderCellDef> Vehicle Direction </th>
+    <td mat-cell *matCellDef="let history"> {{history.vehicleDirection}} </td>
+  </ng-container>
+
+  <!-- Status Column -->
+  <ng-container matColumnDef="status">
+    <th mat-header-cell *matHeaderCellDef> Status </th>
+    <td mat-cell *matCellDef="let history"> {{history.status}} </td>
+  </ng-container>
+
+  <!-- Address Column -->
+  <ng-container matColumnDef="address">
+    <th mat-header-cell *matHeaderCellDef> Address </th>
+    <td mat-cell *matCellDef="let history"> {{history.address}} </td>
+  </ng-container>
+
+  <!-- Latitude Column -->
+  <ng-container matColumnDef="latitude">
+    <th mat-header-cell *matHeaderCellDef> Latitude </th>
+    <td mat-cell *matCellDef="let history"> {{history.latitude}} </td>
+  </ng-container>
+
+  <!-- Longitude Column -->
+  <ng-container matColumnDef="longitude">
+    <th mat-header-cell *matHeaderCellDef> Longitude </th>
+    <td mat-cell *matCellDef="let history"> {{history.longitude}} </td>
+  </ng-container>
+
+  <!-- GPS Speed Column -->
+  <ng-container matColumnDef="gpsSpeed">
+    <th mat-header-cell *matHeaderCellDef> GPS Speed </th>
+    <td mat-cell *matCellDef="let history"> {{history.gpsSpeed}} </td>
+  </ng-container>
+
+  <!-- GPS Time Column -->
+  <ng-container matColumnDef="gpsTime">
+    <th mat-header-cell *matHeaderCellDef> GPS Time </th>
+    <td mat-cell *matCellDef="let history"> {{history.gpsTime|date: 'yyyy-MM-dd HH:mm'}} </td>
+  </ng-container>
+
+  <!-- Show More Column -->
+  <ng-container matColumnDef="showMore">
+    <th mat-header-cell *matHeaderCellDef> Show More </th>
+    <td mat-cell *matCellDef="let history">
+      <button mat-button (click)="showDetails(history.vehicleID)">Show More</button>
+    </td>
+  </ng-container>
+
+
+  <!-- Add Column -->
+  <ng-container matColumnDef="add">
+    <th mat-header-cell *matHeaderCellDef> Add </th>
+    <td mat-cell *matCellDef="let history">
+      <button mat-icon-button (click)="addVehicle(history)" aria-label="Add vehicle">
+        <mat-icon>add</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+
+  <!-- Table Row Definitions -->
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<br />
+<br />
+<br />
+<br />
+<!--<button (click)="add()">add</button>-->
+<br />
+<br />
+
+<mat-form-field class="form-field" style="margin-top:-40px">
+  <p>Vehcile</p>
+  <mat-select [(ngModel)]="vehicle.vehicleID" name="driverID" (selectionChange)="changeVehcileID()">
+    <mat-option *ngFor="let vehicle of vehicles" [value]="vehicle.vehicleID">
+      {{vehicle.vehicleID}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<br />
+
+<mat-form-field appearance="fill" style="margin-right:100px">
+  <p>Starting Date</p>
+  <input matInput type="datetime" [(ngModel)]="startEpoch">
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+  <p>Ending Date</p>
+  <input matInput type="datetime" [(ngModel)]="endEpoch">
+</mat-form-field>
+<br />
+
+
+<button (click)="fetch()">Click to fetch</button>
+

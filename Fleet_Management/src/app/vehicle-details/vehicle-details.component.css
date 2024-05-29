@@ -1,0 +1,10 @@
+.driver-label {
+  color: black;
+
+}
+
+.flex-column{
+    display:flex;
+    flex-direction:column;
+    width:30%;
+}

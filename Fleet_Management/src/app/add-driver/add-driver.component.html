@@ -1,0 +1,28 @@
+<h2 mat-dialog-title>Edit/Add driver</h2>
+<div mat-dialog-content>
+
+
+
+
+
+  <mat-form-field appearance="fill">
+    <p>Driver Name</p>
+    <input matInput [(ngModel)]="driver.driverName" placeholder="Driver Name">
+  </mat-form-field>
+
+
+
+  <mat-form-field appearance="fill">
+    <p>phone Number</p>
+    <input matInput [(ngModel)]="driver.phoneNumber" placeholder="Enter phone number">
+  </mat-form-field>
+
+
+
+
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button (click)="onSave()">Save</button>
+</div>

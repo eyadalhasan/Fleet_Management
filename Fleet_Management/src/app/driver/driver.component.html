@@ -1,0 +1,107 @@
+<!--<table mat-table [dataSource]="drivers" class="mat-elevation-z8">-->
+<!-- Vehicle ID Column -->
+<!--<ng-container matColumnDef="driverID">
+  <th mat-header-cell *matHeaderCellDef>driverID </th>
+  <td mat-cell *matCellDef="let driver"> {{driver.driverID}} </td>
+</ng-container>-->
+<!-- Vehicle Number Column -->
+<!--<ng-container matColumnDef="driverName">
+  <th mat-header-cell *matHeaderCellDef> driverName </th>
+  <td mat-cell *matCellDef="let driver"> {{driver.driverName}} </td>
+</ng-container>-->
+<!-- Vehicle Type Column -->
+<!--<ng-container matColumnDef="phoneNumber">
+  <th mat-header-cell *matHeaderCellDef>phoneNumber</th>
+  <td mat-cell *matCellDef="let driver"> {{driver.phoneNumber}} </td>
+</ng-container>
+
+
+<ng-container matColumnDef="delete">
+  <th mat-header-cell *matHeaderCellDef> Delete </th>
+  <td mat-cell *matCellDef="let driver">
+    <button mat-icon-button (click)="deleteDriver(driver.driverID)" aria-label="Delete driver">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </td>
+</ng-container>-->
+<!-- Edit Column -->
+<!--<ng-container matColumnDef="edit">
+  <th mat-header-cell *matHeaderCellDef> Edit </th>
+  <td mat-cell *matCellDef="let driver">
+    <button mat-icon-button (click)="editDriver(driver)" aria-label="Edit driver">
+      <mat-icon>edit</mat-icon>
+    </button>
+  </td>
+
+</ng-container>
+<ng-container matColumnDef="add">
+  <th mat-header-cell *matHeaderCellDef> Add </th>
+  <td mat-cell *matCellDef="let driver">
+    <button mat-icon-button (click)="addDriver(driver)" aria-label="Add driver">
+      <mat-icon>add</mat-icon>
+    </button>
+  </td>
+</ng-container>-->
+<!-- Delete Column -->
+<!-- Table Row Definitions -->
+<!--<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>-->
+
+
+
+
+<table mat-table [dataSource]="drivers" class="mat-elevation-z8">
+
+  <!-- Driver ID Column -->
+  <ng-container matColumnDef="driverID">
+    <th mat-header-cell *matHeaderCellDef>Driver ID</th>
+    <td mat-cell *matCellDef="let driver"> {{driver.driverID}} </td>
+  </ng-container>
+
+  <!-- Driver Name Column -->
+  <ng-container matColumnDef="driverName">
+    <th mat-header-cell *matHeaderCellDef>Driver Name</th>
+    <td mat-cell *matCellDef="let driver"> {{driver.driverName}} </td>
+  </ng-container>
+
+  <!-- Phone Number Column -->
+  <ng-container matColumnDef="phoneNumber">
+    <th mat-header-cell *matHeaderCellDef>Phone Number</th>
+    <td mat-cell *matCellDef="let driver"> {{driver.phoneNumber}} </td>
+  </ng-container>
+
+  <!-- Delete Column -->
+  <ng-container matColumnDef="delete">
+    <th mat-header-cell *matHeaderCellDef>Delete</th>
+    <td mat-cell *matCellDef="let driver">
+      <button mat-icon-button (click)="deleteDriver(driver.driverID)" aria-label="Delete driver">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+
+  <!-- Edit Column -->
+  <ng-container matColumnDef="edit">
+    <th mat-header-cell *matHeaderCellDef>Edit</th>
+    <td mat-cell *matCellDef="let driver">
+      <button mat-icon-button (click)="editDriver(driver)" aria-label="Edit driver">
+        <mat-icon>edit</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+
+  <!-- Add Column -->
+  <ng-container matColumnDef="add">
+    <th mat-header-cell *matHeaderCellDef>Add</th>
+    <td mat-cell *matCellDef="let driver">
+      <button mat-icon-button (click)="addDriver(driver)" aria-label="Add driver">
+        <mat-icon>add</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+
+  <!-- Table Row Definitions -->
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

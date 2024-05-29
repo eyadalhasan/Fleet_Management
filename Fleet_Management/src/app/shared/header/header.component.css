@@ -1,0 +1,28 @@
+.navbar {
+  background-color: #1976D2;
+  padding: 10px;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-logo {
+  font-size: 24px;
+  color: white;
+}
+
+.nav-wrapper ul {
+  display: flex;
+  list-style-type: none;
+}
+
+  .nav-wrapper ul li {
+    margin-left: 20px;
+  }
+
+    .nav-wrapper ul li button {
+      color: white;
+    }

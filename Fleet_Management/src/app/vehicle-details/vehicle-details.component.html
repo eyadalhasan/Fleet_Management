@@ -1,0 +1,146 @@
+<h1 mat-dialog-title>Vehicle Details</h1>
+<div mat-dialog-content>
+    <p><strong>Vehicle Number:</strong> {{vehicle.VehicleNumber}}</p>
+    <p><strong>Vehicle Type:</strong> {{vehicle.VehicleType}}</p>
+<br>
+
+    Other details here
+    <br />
+
+    <mat-form-field class="form-field">
+        <p>Driver</p>
+        <mat-select [(ngModel)]="inputfields['driverID']" name="driverID">
+            <mat-option *ngFor="let driver of drivers" [value]="driver.driverID">
+                {{driver.driverName}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <p><strong>Phone-Number:</strong> {{vehicle.PhoneNumber}}</p>
+    <p><strong>Vehicle-Make </strong> {{vehicle.VehicleMake}}</p>
+    <p><strong>Vehicle-Model </strong>{{vehicle.VehicleModel}}</p>
+    <p><strong>LastGPSTime </strong>  {{vehicle.LastGPSTime}}</p>
+    <p><strong>LastGPSSpeed </strong> {{vehicle.LastGPSSpeed}}</p>
+    <p><strong>LastAddress </strong>  {{vehicle.LastAddress}}</p>
+    <!--<div class="flex-column">
+        <div>
+            <label>Vehicle Number:</label>
+            <input [(ngModel)]="inputfields['VehicleNumber']" />
+
+        </div>
+
+        <div>
+
+            <label>Vehicle Type:</label>
+            <input [(ngModel)]="inputfields['VehicleType']" />
+
+
+        </div>
+
+        <div>
+
+            <label>Phone-Number:</label>
+            <input [(ngModel)]="inputfields['PhoneNumber']" />
+
+
+        </div>
+
+        <div>
+
+            <label>Vehicle-Make:</label>
+            <input [(ngModel)]="inputfields['VehicleMake']" />
+        </div>
+
+
+        <div>
+
+            <label>Vehicle-Model</label>
+            <input [(ngModel)]="inputfields['VehicleModel']" />
+        </div>
+
+
+        <div>
+
+            <label>LastGPSTime</label>
+            <input [(ngModel)]="inputfields['LastGPSTime']" />
+        </div>
+
+
+
+        <div>
+
+            <label>LastGPSSpeed</label>
+            <input [(ngModel)]="inputfields['LastGPSSpeed']" />
+        </div>
+
+        <div>
+
+            <label>LastAddress</label>
+            <input [(ngModel)]="inputfields['LastAddress']" />
+        </div>
+
+    </div>-->
+
+
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Close</button>
+  <!--<button mat-button (click)="onSaveClick()">Save</button>
+  <button mat-button (click)="onDeleteClick()">Delete</button>-->
+
+</div>
+
+
+        <!--<h1 mat-dialog-title>Vehicle Details</h1>
+    <form [formGroup]="vehicleForm">
+        <div mat-dialog-content>
+            <mat-form-field appearance="fill" class="full-width">
+                <mat-label>Vehicle Number</mat-label>
+                <input matInput formControlName="VehicleNumber">
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="full-width">
+                <mat-label>Vehicle Type</mat-label>
+                <input matInput formControlName="VehicleType">
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="full-width">
+                <mat-label>Driver</mat-label>
+                <mat-select formControlName="DriverID">
+                    <mat-option *ngFor="let driver of drivers" [value]="driver.DriverID">
+                        {{driver.DriverName}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="full-width">
+                <mat-label>Phone Number</mat-label>
+                <input matInput formControlName="PhoneNumber">
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="full-width">
+                <mat-label>Vehicle Make</mat-label>
+                <input matInput formControlName="VehicleMake">
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="full-width">
+                <mat-label>Vehicle Model</mat-label>
+                <input matInput formControlName="VehicleModel">
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="full-width">
+                <mat-label>Last GPS Time</mat-label>
+                <input matInput formControlName="LastGPSTime">
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="full-width">
+                <mat-label>Last GPS Speed</mat-label>
+                <input matInput formControlName="LastGPSSpeed">
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="full-width">
+                <mat-label>Last Address</mat-label>
+                <input matInput formControlName="LastAddress">
+            </mat-form-field>
+        </div>
+        <div mat-dialog-actions align="end">
+            <button mat-button (click)="onDelete()">Delete</button>
+            <button mat-button color="primary" (click)="onSave()">Save</button>
+            <button mat-button (click)="onNoClick()">Close</button>
+        </div>
+    </form>-->
+
+
